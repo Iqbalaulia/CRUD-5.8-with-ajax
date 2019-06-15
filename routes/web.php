@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('ajax-crud', 'AjaxCrudController');
+
+Route::post('ajax-crud/update', 'AjaxCrudController@update')->name('ajax-crud.update');
+
